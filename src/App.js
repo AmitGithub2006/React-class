@@ -1,45 +1,70 @@
+// import React, { Component } from "react";
+
+import { useState } from "react";
 import "./App.css";
 import User from "./components/User";
-import { useState } from "react";
+import Student from "./components/Student";
 
 function App() {
-  const [name, setName] = useState("John");
-  // const [num, setNum] = useState(0);
 
-  function InnerFunc() {
-    // name = "Peter";
-    // console.log("My name is", name);
+// const [name, setName] = useState("John");
+const [name, setName] = useState("Sangeeta");
 
-    setName("Peter");
-    // setNum(num + 1);
+// function innerFunc() {
+//   console.log("Hello App.jsx");
+//   setName("Smith");
+// }
 
-    //  return (
-    // <div>This is function inside App.jsx</div>
-    //   console.log("This is function inside App.jsx")
-    //  )
-  }
+return (
+  <>
+    {/* <User /> */}
 
-  return (
-    <>
-      <User />
-
-      {/* <button onClick={InnerFunc()}>Click</button> This will call the function immediately so not recommended
+    {/* <button onClick={InnerFunc()}>Click</button> This will call the function immediately so not recommended
       <button onClick={console.log("Hello App.jsx")}>Click</button> This will call the function immediately so not recommended */}
+    {/* <button onClick={innerFunc}>Click</button> */}
+    {/* <h1>My name is {name}</h1>
+<button onClick={() => innerFunc()}>Click</button> */}
 
-      <h1>{name}</h1>
-      {/* <h2>{num}</h2> */}
-      <button onClick={() => InnerFunc()}>Click</button>
-      {/* <button onClick={() => console.log("Hello App.jsx")}>Click</button> */}
-      {/* {InnerFunc()} */}
-      {/* <InnerFunc /> */}
+    {/* <button onClick={() => console.log("Hiiiiiiii")}>Click</button> */}
 
-      {/* <div>
-        <h1>This is my heading
-        </h1>
-        <p>This is my paragraph</p>
-      </div> */}
-    </>
-  );
+    {/* <Student name="Amit" city={"Delhi"} /> */}
+    {/* <Student name={"Punam"} city={"Pune"} />
+<Student name={"Mahima"} city={"Maharashtra"} /> */}
+
+    {/* <button onClick={() => setName("Punam")}>Update Name</button> */}
+
+
+    <Student name="Mahima" city="Bangalore"/>
+    <Student name="Tahira" city="Amravati"/>
+  </>
+);
 }
 
 export default App;
+
+// Class Component
+
+// class App extends Component {
+//   constructor() {
+//     super();
+//     this.state = {
+//       fname: "John",
+//     };
+//   }
+
+//   updateName() {
+//     this.setState({
+//       fname: "Smith"
+//     })
+//   }
+//   render() {
+//     return (
+//       <>
+//         <h1>My name is {this.state.fname}</h1>
+//         <button onClick={() => this.updateName()}>Click</button>
+//       </>
+//     );
+//   }
+// }
+
+// export default App;
