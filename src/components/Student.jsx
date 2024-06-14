@@ -12,7 +12,8 @@ import React from "react";
 //       >
 //         <h1>Hello, I am {props.name}</h1>
 //         <h2>I am from {props.city}</h2>
-//         {/* <h3>My current location is {props.details.address}</h3> */}
+//         <h3>My current location is {props.details.address}</h3>
+//         <h4>My contact number is {props.details.mobile}</h4>
 //       </div>
 //     );
 // }
