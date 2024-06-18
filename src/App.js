@@ -6,8 +6,10 @@ import User from "./components/User";
 import Student from "./components/Student";
 import Input from "./components/Input";
 import Hide from "./components/Hide";
-
 import Form from "./components/Form";
+import Profile from "./components/Profile";
+import Login from "./components/Login";
+import Users from "./components/Users";
 
 function App() {
   // const [name, setName] = useState("John");
@@ -17,6 +19,10 @@ function App() {
   //   console.log("Hello App.jsx");
   //   setName("Smith");
   // }
+
+  function getData() {
+    console.log("Hello from App.jsx");
+  }
 
   return (
     <>
@@ -47,7 +53,13 @@ function App() {
 
       {/* <Hide /> */}
 
-      <Form />
+      {/* <Form /> */}
+
+      {/* <Profile /> */}
+
+      {/* <Login /> */}
+
+      <Users data={getData} />
     </>
   );
 }

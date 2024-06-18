@@ -8,14 +8,15 @@ function Form() {
 
     function formData(e) {
         e.preventDefault();
-        console.log(name, city, agree);
+        // console.log(name, city, agree);
+        console.log(e.target[0].value);
     }
     return (
       <div style={{textAlign: "center"}}>
         <h1>Form Component</h1>
         <form onSubmit={formData}>
           <input type="text" placeholder="Enter your name..." onChange={(e) => setName(e.target.value)} /> <br />
-          <br />
+          {/* <br />
           <select onChange={(e) => setCity(e.target.value)}>
             <option>Mumbai</option>
             <option>Pune</option>
@@ -27,7 +28,7 @@ function Form() {
           <input type="checkbox" onChange={(e) => setAgree(e.target.checked)} />
           <span>I agree</span>
           <br />
-          <br />
+          <br /> */}
           <button type="submit">Submit</button>
         </form>
       </div>
