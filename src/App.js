@@ -10,10 +10,15 @@ import Form from "./components/Form";
 import Profile from "./components/Profile";
 import Login from "./components/Login";
 import Users from "./components/Users";
+import Mounting from "./components/Mounting";
+import RenderOnPropsChange from "./components/RenderOnPropsChange";
+import Updating from "./components/Updating";
+import Unmounting from "./components/Unmounting";
 
 function App() {
   // const [name, setName] = useState("John");
-  const [name, setName] = useState("Sangeeta");
+  // const [name, setName] = useState("Sangeeta");
+  const [show, setShow] = useState(true);
 
   // function innerFunc() {
   //   console.log("Hello App.jsx");
@@ -59,7 +64,17 @@ function App() {
 
       {/* <Login /> */}
 
-      <Users data={getData} />
+      {/* <Users data={getData} /> */}.
+
+      {/* <Mounting /> */}
+
+      {/* <RenderOnPropsChange name={name}/>
+      <button onClick={() => setName('Sangeeta Rathore')}>Update Name</button> */}
+
+      {/* <Updating /> */}
+
+      {show && <Unmounting />}
+      <button onClick={() => setShow(!show)}>Toggle</button>
     </>
   );
 }
