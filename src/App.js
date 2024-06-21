@@ -2,18 +2,21 @@
 
 import { useState } from "react";
 import "./App.css";
-import User from "./components/User";
-import Student from "./components/Student";
-import Input from "./components/Input";
-import Hide from "./components/Hide";
-import Form from "./components/Form";
-import Profile from "./components/Profile";
-import Login from "./components/Login";
-import Users from "./components/Users";
-import Mounting from "./components/Mounting";
-import RenderOnPropsChange from "./components/RenderOnPropsChange";
-import Updating from "./components/Updating";
-import Unmounting from "./components/Unmounting";
+// import User from "./components/User";
+// import Student from "./components/Student";
+// import Input from "./components/Input";
+// import Hide from "./components/Hide";
+// import Form from "./components/Form";
+// import Profile from "./components/Profile";
+// import Login from "./components/Login";
+// import Users from "./components/Users";
+// import Mounting from "./components/Mounting";
+// import RenderOnPropsChange from "./components/RenderOnPropsChange";
+// import Updating from "./components/Updating";
+// import Unmounting from "./components/Unmounting";
+import Array from "./components/Array";
+import ReuseComponent from "./components/ReuseComponent";
+import UseEffect from "./components/UseEffect";
 
 function App() {
   // const [name, setName] = useState("John");
@@ -28,6 +31,29 @@ function App() {
   function getData() {
     console.log("Hello from App.jsx");
   }
+
+  const students = [
+    {
+      name: "Mahima",
+      city: "Bangalore",
+      contact: 111,
+    },
+    {
+      name: "Tahira",
+      city: "Amravati",
+      contact: 222,
+    },
+    {
+      name: "Sangeeta",
+      city: "Nagpur",
+      contact: 333,
+    },
+    {
+      name: "Komal",
+      city: "Pune",
+      contact: 444,
+    },
+  ];
 
   return (
     <>
@@ -73,8 +99,18 @@ function App() {
 
       {/* <Updating /> */}
 
-      {show && <Unmounting />}
-      <button onClick={() => setShow(!show)}>Toggle</button>
+      {/* {show && <Unmounting />}
+      <button onClick={() => setShow(!show)}>Toggle</button> */}
+
+      {/* <Array /> */}
+
+{/* {
+        students.map((student) => {
+         return <ReuseComponent data={student} />
+        })
+} */}
+
+<UseEffect />
     </>
   );
 }
